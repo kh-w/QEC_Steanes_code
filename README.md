@@ -12,6 +12,6 @@ A valid logical state is a superposition of the states in the code space, which 
 
 The logical basis state $\left|0\right\rangle_L$​ is an equal superposition of the quantum versions of the classical Hamming codewords:
 
-$|0_L\rangle = \frac{1}{\sqrt{8}}\sum_{x\in\text{Hamming Codewords}}|x\rangle\quad$
+$|0_L\rangle = \frac{1}{\sqrt{8}}\sum_{x\in\text{Hamming Codewords}}\left|x\right\rangle\$
 
 where I used a spreadsheet to illustrate how to obtain the codewords using the stabilizers. 
