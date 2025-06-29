@@ -50,19 +50,19 @@ The same recipe will be used for both $X$ and $Z$ errors.
 
 Citcuit description:
 
-1st-7th wires: The 7-qubit logical quantum state.
-8-10th wires: $X_0$, $X_1$ and $X_2$ to check bit flips, they are storing the dot products (mod 2) of the 7-qubit with stabilizers XIXIXIX, IXXIIXX, IIIXXXX respectively.
-11-13th wires: $Z_0$, $Z_1$ and $Z_2$ to check phase flips, they are storing the dot products (mod 2) of the 7-qubit with stabilizers ZIZIZIZ, IZZIIZZ, IIIZZZZ respectively.
-14th wire: Store the measured 8-10th wires, correction will be based on this and the error recipe.
-15th wire: Store the measured 11-13th wires, correction will be based on this and the error recipe.
-16th wire: Measure the corrected 7-qubit and store the result here.
+- 1st-7th wires: The 7-qubit logical quantum state.
+- 8-10th wires: $X_0$, $X_1$ and $X_2$ to check bit flips, they are storing the dot products (mod 2) of the 7-qubit with stabilizers XIXIXIX, IXXIIXX, IIIXXXX respectively.
+- 11-13th wires: $Z_0$, $Z_1$ and $Z_2$ to check phase flips, they are storing the dot products (mod 2) of the 7-qubit with stabilizers ZIZIZIZ, IZZIIZZ, IIIZZZZ respectively.
+- 14th wire: Store the measured 8-10th wires, correction will be based on this and the error recipe.
+- 15th wire: Store the measured 11-13th wires, correction will be based on this and the error recipe.
+- 16th wire: Measure the corrected 7-qubit and store the result here.
 
-Step 1: Prepare the logical quantum state $|0_L\rangle$ described in section [Logical-state-preparation](#logical-state-preparation).
-Step 2: Inject random errors, in our case, 3 small random errors on random qubits, 1 big large fixed error on a fixed qubit.
-Step 3: Perform the dot products (mod 2) of the 7-qubit with stabilizers XIXIXIX, IXXIIXX, IIIXXXX and store.
-Step 4: Perform the dot products (mod 2) of the 7-qubit with stabilizers ZIZIZIZ, IZZIIZZ, IIIZZZZ and store.
-Step 5: Measure the syndromes and store.
-Step 6: Perform bit flip error correction based on the value of 14th wire according to the error recipe.
-Step 7: Perform phase flip error correction based on the value of 15th wire according to the error recipe.
-Step 8: Measure the corrected 7-qubit and store.
+- Step 1: Prepare the logical quantum state $|0_L\rangle$ described in section [Logical-state-preparation](#logical-state-preparation).
+- Step 2: Inject random errors, in our case, 3 small random errors on random qubits, 1 big large fixed error on a fixed qubit.
+- Step 3: Perform the dot products (mod 2) of the 7-qubit with stabilizers XIXIXIX, IXXIIXX, IIIXXXX and store.
+- Step 4: Perform the dot products (mod 2) of the 7-qubit with stabilizers ZIZIZIZ, IZZIIZZ, IIIZZZZ and store.
+- Step 5: Measure the syndromes and store.
+- Step 6: Perform bit flip error correction based on the value of 14th wire according to the error recipe.
+- Step 7: Perform phase flip error correction based on the value of 15th wire according to the error recipe.
+- Step 8: Measure the corrected 7-qubit and store.
 
