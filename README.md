@@ -26,13 +26,15 @@ Procedures are as followed:
 
   ![image](https://github.com/user-attachments/assets/960dc107-b464-4473-932d-a9b841d4200b)
 - Create all 128 basis states $\left|x\right\rangle$ of a 7-qubit.
-- Get the dot products $H\cdot x$.
-- The $\left|x\right\rangle$ with zero dot products, i.e. $(0, 0, 0)^T$, are in the code space.
+- Get the dot products $H\cdot x$ for all $x$.
+- The $x$ with zero dot products, i.e. $(0, 0, 0)^T$, are in the code space.
 - In addition, the $\left|x\right\rangle$ with zero dot products AND with even number of 1s are the logical basis states of $|0_L\rangle$.
 
 As a result, I obtained:
 
 $|0_L\rangle = \frac{1}{\sqrt{8}}(\left|0000000\right\rangle\+\left|0111100\right\rangle\+\left|1011010\right\rangle\+\left|1100110\right\rangle\+\left|1101001\right\rangle\+\left|1010101\right\rangle\+\left|0110011\right\rangle\+\left|0001111\right\rangle\)$
+
+$|1_L\rangle = \frac{1}{\sqrt{8}}(\left|1111111\right\rangle\+\left|1000011\right\rangle\+\left|0100101\right\rangle\+\left|0011001\right\rangle\+\left|0010110\right\rangle\+\left|0101010\right\rangle\+\left|1001100\right\rangle\+\left|1110000\right\rangle\)$
 
 It will be implemented in the circuit manually instead of using a collection of Pauli gates. 
 
