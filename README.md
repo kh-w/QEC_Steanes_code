@@ -36,7 +36,7 @@ $|0_L\rangle = \frac{1}{\sqrt{8}}(\left|0000000\right\rangle\+\left|0111100\righ
 
 $|1_L\rangle = \frac{1}{\sqrt{8}}(\left|1111111\right\rangle\+\left|1000011\right\rangle\+\left|0100101\right\rangle\+\left|0011001\right\rangle\+\left|0010110\right\rangle\+\left|0101010\right\rangle\+\left|1001100\right\rangle\+\left|1110000\right\rangle\)$
 
-It will be implemented in the circuit manually instead of using a collection of Pauli gates. 
+It will be implemented in the circuit manually instead of using a collection of Pauli gates because we are not going to decode the corrected 7-qubit at the end. If decoding is needed, an encoding circuit is needed and the decode circuit would be the inverse of the encoding circuit.
 
 ## Error-recipe
 
