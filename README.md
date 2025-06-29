@@ -1,6 +1,7 @@
 # Steane's-Code---Quantum-Error-Correction
 
 - [Introduction](#introduction)
+- [Logical-state-preparation](#logical-state-preparation)
 
 ## Introduction
 
@@ -14,4 +15,4 @@ The logical basis state $\left|0\right\rangle_L$​ is an equal superposition of
 
 $|0_L\rangle = \frac{1}{\sqrt{8}}\sum_{x\in\text{Hamming Codewords}}\left|x\right\rangle\$
 
-where I used a spreadsheet to illustrate how to obtain the codewords using the stabilizers. 
+where I used a [spreadsheet](https://github.com/kh-w/QEC_Steanes_code/blob/main/steanes_code_stabilizer.xlsx) to illustrate how to obtain the codewords using the stabilizers. 
