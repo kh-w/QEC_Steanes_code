@@ -6,7 +6,7 @@
 
 ## Introduction
 
-Steane's code is well known for its evolution from the classical $[7,4,3]$ Hamming code, which uses $(7-4)=3$ extra bits to encode (protect) 4 bits of data, with a code distance of 3. It uses the same parity-check matrix to correct both bit-flip and phase-flip errors, resulting in a circuit with 7 physical qubits to encode (protect) 1 logical qubit. The code distance is also 3, as in the classical case, which is the minimum number of physical qubit errors that makes an error on a valid logical state undetectable, i.e., the error transforms one valid logical state into another.
+Quantum information is highly susceptible to various sources of error, including decoherence, environmental noise, and imperfect operations. One effective way to protect quantum data, which is similar to classical error correction, is to encode a single qubit into a larger entangled state across multiple physical qubits. This redundancy allows local errors, which affect only some of the qubits, to be detected and corrected without disturbing the underlying logical information. Steane's code is one of the well known quantum correction code, famous for its evolution from the classical $[7,4,3]$ Hamming code, which uses $(7-4)=3$ extra bits to encode (protect) 4 bits of data, with a code distance of 3. It uses the same parity-check matrix to correct both bit-flip and phase-flip errors, resulting in a circuit with 7 physical qubits to encode (protect) 1 logical qubit. The code distance is also 3, as in the classical case, which is the minimum number of physical qubit errors that makes an error on a valid logical state undetectable, i.e., the error transforms one valid logical state into another.
 
 A valid logical state is a superposition of the states in the code space, which is spanned by two orthonormal logical basis states, $\left|0\right\rangle_L$ and $\left|1\right\rangle_L$. The logical basis state $\left|0\right\rangle_L$​ is an equal superposition of the quantum versions of the classical Hamming codewords, and $\left|1\right\rangle_L=X^{\otimes7}\left|0\right\rangle_L$​. The error correction procedure is also similar to that of the classical Hamming code, but corrections must be made for both bit flips and phase flips.
 
@@ -43,5 +43,7 @@ The same recipe will be used for both $X$ and $Z$ errors.
 
 ## Circuit
 
-![image](https://github.com/user-attachments/assets/92c54229-c160-4e29-bdd2-74e3bf3fff56)
+![image](https://github.com/user-attachments/assets/5a3e0095-6cac-47a2-95ab-be3a49d6bca8)
 
+Step 1: Prepare the logical quantum state $|0_L\rangle$ described in section [Logical-state-preparation](#logical-state-preparation).
+Step 2: 
