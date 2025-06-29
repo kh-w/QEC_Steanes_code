@@ -2,6 +2,7 @@
 
 - [Introduction](#introduction)
 - [Logical-state-preparation](#logical-state-preparation)
+- [Error-recipe](#error-recipe)
 
 ## Introduction
 
@@ -16,3 +17,29 @@ The logical basis state $\left|0\right\rangle_L$​ is an equal superposition of
 $|0_L\rangle = \frac{1}{\sqrt{8}}\sum_{x\in\text{Hamming Codewords}}\left|x\right\rangle\$
 
 where I used a [spreadsheet](https://github.com/kh-w/QEC_Steanes_code/blob/main/steanes_code_stabilizer.xlsx) to illustrate how to obtain the codewords using the stabilizers. 
+
+Procedures are as followed:
+- Write down the parity-check matrix $H$ of the Hamming code.
+
+  ![image](https://github.com/user-attachments/assets/960dc107-b464-4473-932d-a9b841d4200b)
+- Create all 128 basis states $\left|x\right\rangle$ of a 7-qubit.
+- Get the dot products $H\cdot x$.
+- The $\left|x\right\rangle$ with zero dot products, i.e. $(0, 0, 0)^T$, are in the code space.
+- In addition, the $\left|x\right\rangle$ with zero dot products AND with even number of 1s are the logical basis states of $|0_L\rangle$.
+
+As a result, I obtained:
+
+$|0_L\rangle = \frac{1}{\sqrt{8}}(\left|0000000\right\rangle\+\left|0111100\right\rangle\+\left|1011010\right\rangle\+\left|1100110\right\rangle\+\left|1101001\right\rangle\+\left|1010101\right\rangle\+\left|0110011\right\rangle\+\left|0001111\right\rangle\)$
+
+It will be implemented in the circuit manually instead of using a collection of Pauli gates. 
+
+## Error-recipe
+
+We never measure the logical qubit directly during quantum error correction, as this would cause the quantum state to collapse. Instead, it is standard practice to use ancilla qubits to store the results of error checks, known as syndromes. In the circuit I am building, three ancilla qubits will be used to record the bit-flip syndromes (calculated as dot products modulo 2), and another three ancillas will record the phase-flip syndromes (also dot products modulo 2). These ancillas are then measured to obtain the syndrome values, which are encoded as classical bits. The resulting classical bits represent integers from 0 to 7, each corresponding to a specific error that can be identified and corrected:
+
+![image](https://github.com/user-attachments/assets/81a850c7-b1d6-4126-a097-e22277b1d45c)
+
+The same recipe will be used for both $X$ and $Z$ errors.
+
+## Circuit
+
