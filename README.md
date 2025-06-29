@@ -43,3 +43,5 @@ The same recipe will be used for both $X$ and $Z$ errors.
 
 ## Circuit
 
+![image](https://github.com/user-attachments/assets/92c54229-c160-4e29-bdd2-74e3bf3fff56)
+
