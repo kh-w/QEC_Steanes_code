@@ -5,6 +5,7 @@
 - [Error-recipe](#error-recipe)
 - [Circuit](#circuit)
   - [Circuit-description](#circuit-description)
+- [Result](#result)
 
 ## Introduction
 
@@ -68,4 +69,18 @@ The same recipe will be used for both $X$ and $Z$ errors.
 - Step 6: Perform bit flip error correction based on the value of 14th wire according to the error recipe.
 - Step 7: Perform phase flip error correction based on the value of 15th wire according to the error recipe.
 - Step 8: Measure the corrected 7-qubit and store.
+
+## Result
+
+When an error affects a valid logical state, it typically transforms the state into a superposition that includes basis states outside the code space. As a result, if we measure the system, it may collapse to a state that is not part of the code space, indicating that an error has occurred. This phenomenon can be observed by disabling the error correction steps in the circuit and running it for 50,000 repetitions to produce a histogram of measurement outcomes. The presence of out-of-code-space results reveals the impact of uncorrected errors.
+
+### Before:
+![image](https://github.com/user-attachments/assets/3d41c5a8-6c7f-4852-b010-cd0a3be5d385)
+
+The 16 tall bars represent the valid basis states within the code space. The remaining shorter bars correspond to states outside the code space, indicating the presence of uncorrected errors. 
+
+### After:
+![image](https://github.com/user-attachments/assets/50ede470-77ae-4a8c-84b8-0e7cc9363a89)
+
+The 16 valid basis states remain, but the short bars have disappeared! This shows that all measurements now fall within the code space, confirming that the error correction is successfully working.
 
