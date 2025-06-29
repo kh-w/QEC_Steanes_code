@@ -3,6 +3,7 @@
 - [Introduction](#introduction)
 - [Logical-state-preparation](#logical-state-preparation)
 - [Error-recipe](#error-recipe)
+- [Circuit](#circuit)
 
 ## Introduction
 
