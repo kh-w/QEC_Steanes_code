@@ -86,3 +86,7 @@ The 16 tall bars represent the valid basis states within the code space. The rem
 
 The 16 valid basis states remain, but the short bars have disappeared! This shows that all measurements now fall within the code space, confirming that the error correction is successfully working.
 
+### Success probabilty
+<img width="420" height="281" alt="image" src="https://github.com/user-attachments/assets/9b601815-4e10-4861-9503-e851cdbf5e2f" />
+
+
