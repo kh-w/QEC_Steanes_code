@@ -86,7 +86,7 @@ The 16 tall bars represent the valid basis states within the code space. The rem
 
 The 16 valid basis states remain, but the short bars have disappeared! This shows that all measurements now fall within the code space, confirming that the error correction is successfully working.
 
-### Success probabilty
+### Success probability
 <img width="415" height="276" alt="image" src="https://github.com/user-attachments/assets/cf54b384-d16d-49ac-b080-2088c6aac127" />
 
 As the probability of error increases, multiple errors may occur and the Steane's code may not be able to fully fix the error.
